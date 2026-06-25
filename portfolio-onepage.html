@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jovan Campbell | BA &amp; UX Portfolio</title>
+<style>
+
+
+  :root {
+    --ink: #2F2A26;
+    --bg: #FBFAF7;
+    --card: #FFFFFF;
+    --primary: #1B3A4B;
+    --primary-light: #3D5A66;
+    --accent: #E8845C;
+    --accent-soft: #FBE3D5;
+    --muted: #7A8C92;
+    --border: #E4E0D8;
+    --success: #4A7C59;
+    --success-soft: #EEF2EC;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 28px; }
+
+  .topnav {
+    background: #142A37;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .topnav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 28px;
+  }
+  .topnav-back, .topnav-link {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #C9D6DA;
+    text-decoration: none;
+  }
+  .topnav-back:hover, .topnav-link:hover { color: #fff; }
+
+  /* ---- Hero ---- */
+  .hero {
+    background: var(--primary);
+    color: #fff;
+    padding: 90px 0 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    top: -120px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,132,92,0.25), transparent 70%);
+  }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 1.12;
+    max-width: 700px;
+    margin-bottom: 22px;
+  }
+  .hero .sub {
+    font-size: 19px;
+    color: #C9D6DA;
+    max-width: 560px;
+    line-height: 1.55;
+  }
+  .meta-row {
+    display: flex;
+    gap: 36px;
+    margin-top: 44px;
+    flex-wrap: wrap;
+  }
+  .meta-item .label {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #8FA5AC;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  .meta-item .value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  /* ---- Sections ---- */
+  section.block { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  section.block:last-of-type { border-bottom: none; }
+
+  .section-label {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .section-num {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+  h2.section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 30px 0 12px;
+  }
+  p { font-size: 16px; color: #4A453F; margin-bottom: 16px; max-width: 700px; }
+  .lede {
+    font-size: 19px;
+    color: var(--ink);
+    font-weight: 500;
+    max-width: 680px;
+    margin-bottom: 8px;
+  }
+
+  ul.list { margin: 14px 0 20px 0; padding: 0; list-style: none; max-width: 700px; }
+  ul.list li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    font-size: 15.5px;
+    color: #4A453F;
+  }
+  ul.list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  blockquote.design-q {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary);
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 24px;
+    margin: 28px 0;
+    max-width: 640px;
+    line-height: 1.45;
+  }
+
+  .placeholder-note {
+    background: #FDEAEA;
+    border: 1px solid #F3C9C9;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+    color: #A13A3A;
+    margin-bottom: 24px;
+    max-width: 700px;
+  }
+
+  .finding {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+  .finding .quote {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+  .finding .desc { font-size: 14.5px; color: #6B655E; margin: 0; }
+
+  .img-frame {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #F0EEE7;
+    margin: 28px 0 10px;
+  }
+  .img-frame img { display: block; width: 100%; height: auto; }
+  .caption {
+    font-size: 13.5px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+
+  .flow-strip {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 0 20px;
+    margin: 20px 0;
+  }
+  .flow-strip .shot {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 18px rgba(27,58,75,0.08);
+  }
+  .flow-strip .shot img { width: 100%; display: block; }
+  .flow-arrow {
+    align-self: center;
+    color: var(--accent);
+    font-size: 22px;
+    flex: 0 0 auto;
+  }
+
+  table.metrics {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    max-width: 700px;
+  }
+  table.metrics th {
+    background: var(--primary);
+    color: #fff;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  table.metrics td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14.5px;
+    color: #4A453F;
+  }
+  table.metrics tr:nth-child(even) td { background: #F5F3ED; }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+    max-width: 700px;
+  }
+  .impact-card {
+    background: var(--success-soft);
+    border-radius: 14px;
+    padding: 18px;
+  }
+  .impact-card .big {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--success);
+    margin-bottom: 4px;
+  }
+  .impact-card .small { font-size: 13px; color: #3D5A45; }
+
+  footer {
+    background: var(--primary);
+    color: #C9D6DA;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  footer strong { color: #fff; }
+
+
+
+  /* ---- Sticky site nav ---- */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #142A37;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .site-nav-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    gap: 18px;
+  }
+  .site-nav-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    flex: 0 0 auto;
+  }
+  .site-nav-links {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .site-nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #C9D6DA;
+    text-decoration: none;
+  }
+  .site-nav-links a:hover { color: #fff; }
+
+  /* ---- Intro hero (top banner) ---- */
+  .intro-hero {
+    background: var(--primary);
+    color: #fff;
+    padding: 80px 0 64px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .intro-hero::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -160px;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,132,92,0.22), transparent 70%);
+  }
+  .avatar-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .intro-hero h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.18;
+    max-width: 700px;
+    margin: 0 auto 18px;
+    position: relative;
+    z-index: 1;
+  }
+  .intro-hero .sub {
+    font-size: 17px;
+    color: #C9D6DA;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+  .intro-hero .eyebrow { position: relative; z-index: 1; }
+
+  /* ---- Track / category intro blocks ---- */
+  section.category { padding: 60px 0 8px; }
+  .category-head { text-align: center; margin-bottom: 8px; }
+  .category-eyebrow {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .category-head h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .category-head p {
+    font-size: 15px;
+    color: #6B655E;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* ---- Case study kicker bar (separator between articles) ---- */
+  .case-kicker {
+    background: #F0EEE7;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+  }
+  .case-kicker .wrap {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .case-article .topnav { display: none; }
+
+  .site-footer {
+    background: var(--primary);
+    color: #C9D6DA;
+    padding: 50px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  .site-footer strong { color: #fff; }
+  .site-footer .footer-links { margin-top: 10px; font-size: 13px; }
+  .site-footer .footer-links a { color: #C9D6DA; text-decoration: none; }
+
+
+
+  /* ---- Smooth, offset anchor scrolling ---- */
+  html { scroll-behavior: smooth; }
+  [id] { scroll-margin-top: 64px; }
+
+  /* ---- Responsive tables ---- */
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px 0; }
+  .table-scroll table.metrics { margin: 0; min-width: 480px; }
+
+  /* ---- Active nav link ---- */
+  .site-nav-links a.active { color: #fff; }
+
+  /* ---- Responsive breakpoints ---- */
+  @media (max-width: 768px) {
+    .wrap { padding: 0 20px; }
+    .hero { padding: 64px 0 52px; }
+    .hero h1 { font-size: 34px; }
+    .hero .sub { font-size: 16.5px; }
+    .intro-hero { padding: 64px 0 48px; }
+    .intro-hero h1 { font-size: 30px; }
+    h2.section-title { font-size: 24px; }
+    .category-head h2 { font-size: 23px; }
+    .meta-row { gap: 22px; row-gap: 18px; margin-top: 32px; }
+    .site-nav-links { gap: 14px; }
+    .impact-grid { grid-template-columns: 1fr; }
+    blockquote.design-q { font-size: 19px; }
+  }
+
+  @media (max-width: 480px) {
+    .site-nav-inner { padding: 0 16px; height: 50px; }
+    .site-nav-name { font-size: 13.5px; }
+    .site-nav-links { gap: 11px; }
+    .site-nav-links a { font-size: 12px; }
+    .hero { padding: 52px 0 40px; }
+    .hero h1 { font-size: 26px; }
+    .hero .sub { font-size: 15px; }
+    .eyebrow { font-size: 11.5px; }
+    .avatar-mark { width: 52px; height: 52px; font-size: 21px; }
+    .intro-hero h1 { font-size: 23px; }
+    .intro-hero .sub { font-size: 15px; }
+    h2.section-title { font-size: 21px; }
+    .lede { font-size: 16.5px; }
+    p { font-size: 15px; }
+    .meta-row { gap: 16px; row-gap: 16px; }
+    .meta-item .value { font-size: 13.5px; }
+    .flow-strip .shot { width: 150px; }
+    blockquote.design-q { font-size: 17px; padding-left: 16px; }
+    .finding .quote { font-size: 15.5px; }
+  }
+
+  @media (max-width: 360px) {
+    .hero h1 { font-size: 23px; }
+    .intro-hero h1 { font-size: 21px; }
+  }
+
+  /* ---- Balanced headline/quote wrapping ---- */
+  .hero h1, .intro-hero h1, .category-head h2, blockquote.design-q, .hero .sub, .intro-hero .sub {
+    text-wrap: balance;
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="#top" class="site-nav-name">Jovan Campbell</a>
+    <div class="site-nav-links">
+      <a href="#qsen-ba">QSEN &middot; BA</a>
+      <a href="#radiant">Radiant &middot; BA</a>
+      <a href="#qsen-ux">QSEN &middot; UX</a>
+      <a href="#railsmart">RailSmart &middot; UX</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top" class="intro-hero">
+  <div class="wrap">
+    <div class="avatar-mark">JC</div>
+    <div class="eyebrow">Portfolio</div>
+    <h1>Jovan Campbell: Business Analysis &amp; UX Design</h1>
+    <p class="sub">Four case studies spanning requirements, process mapping, research and product design, built from real operational problems and a Google UX Design training foundation. Jump to any case study below, or scroll through all four.</p>
+  </div>
+</div>
+
+<section class="category" id="ba-track">
+  <div class="wrap">
+    <div class="category-head">
+      <div class="category-eyebrow">Business Analysis</div>
+      <h2>Defining the problem, before designing the solution</h2>
+      <p>Process mapping, stakeholder analysis and requirements documents that turn a messy operational problem into a clear brief.</p>
+    </div>
+  </div>
+</section>
+
+<article id="qsen-ba" class="case-article">
+<div class="case-kicker"><div class="wrap">Case Study 1 of 4 &middot; Business Analysis</div></div>
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Business Analysis Case Study &middot; Part 1 of 2</div>
+    <h1>Turning a spreadsheet problem into a clear set of business requirements.</h1>
+    <p class="sub">QSEN starts with a real operational gap in UK secondary schools: SEN student information that's scattered, hard to access, and costly in teacher time. This case study maps that problem and defines what a solution needs to do.</p>
+    <div class="meta-row">
+      <div class="meta-item"><div class="label">Role</div><div class="value">Business Analyst (solo)</div></div>
+      <div class="meta-item"><div class="label">Method</div><div class="value">BPMN, MoSCoW, user stories</div></div>
+      <div class="meta-item"><div class="label">Tools</div><div class="value">Process mapping, stakeholder analysis</div></div>
+      <div class="meta-item"><div class="label">Output</div><div class="value">BRD &amp; requirements package</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">01</span><h2 class="section-title">Business Context &amp; Problem</h2></div>
+    <p class="lede">UK secondary schools are legally required to identify, support and track outcomes for students with Special Educational Needs (SEN). In practice, that information usually lives in spreadsheets, scattered emails and paper files.</p>
+    <p>Subject teachers, who may teach over 150 students across multiple year groups, are expected to find, interpret and apply this information before every lesson, often with no reliable single source of truth.</p>
+    <h3>Core issues</h3>
+    <ul class="list">
+      <li>Subject teachers spend an estimated 5 to 10 minutes per lesson trying to locate or recall SEN student details, time that's unpaid, unplanned and taken directly from lesson preparation</li>
+      <li>SEN profiles are duplicated across shared drives, email attachments and printed files, with no reliable single source of truth</li>
+      <li>There's no structured way for teachers to share what works for a given student, so successful strategies get lost when a teacher changes or a student moves classes</li>
+      <li>SENCOs manually chase teachers for progress updates and consolidate responses by hand, a process that doesn't scale as SEN caseloads grow</li>
+      <li>Sensitive safeguarding data is distributed across uncontrolled file copies, creating GDPR and safeguarding audit risk</li>
+    </ul>
+    <h3>Business driver</h3>
+    <p>This case study prioritises efficiency and time-saving for subject teachers as the primary driver. Reducing the time and cognitive load needed to access and act on SEN information directly improves lesson quality and teacher capacity, while the resulting centralisation also delivers a useful compliance and safeguarding benefit.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">02</span><h2 class="section-title">As-Is Process</h2></div>
+    <p class="lede">Mapping the current workflow made the cost of fragmentation visible: multiple handoffs, manual chasing, and several points where information simply doesn't reach the person who needs it.</p>
+    <div class="img-frame"><img src="images/as-is.png" alt="As-is process map showing the spreadsheet-based workflow" /></div>
+    <p class="caption">Fig 1. Current state: a subject teacher and SENCO locating and using SEN information ahead of a lesson, and tracking progress over time.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">03</span><h2 class="section-title">Stakeholder Analysis</h2></div>
+    <p class="lede">Six stakeholder groups shape what this solution needs to do, from the teachers using it daily to the data protection officer who has to sign off on it.</p>
+    <div class="table-scroll"><table class="metrics">
+      <tr><th>Stakeholder</th><th>Role</th><th>Key interest</th><th>Influence</th></tr>
+      <tr><td>Subject Teachers</td><td>Primary end users</td><td>Fast, reliable access with minimal extra admin</td><td>High</td></tr>
+      <tr><td>SENCO / SEN Dept</td><td>Profile owners</td><td>Low-effort way to maintain data and track outcomes</td><td>High</td></tr>
+      <tr><td>Senior Leadership</td><td>Governance &amp; accountability</td><td>Auditable evidence of SEN support quality</td><td>Medium</td></tr>
+      <tr><td>Parents / Carers</td><td>Indirect stakeholders</td><td>Confidence staff understand their child's needs</td><td>Medium</td></tr>
+      <tr><td>IT / Data Protection</td><td>Compliance gatekeeper</td><td>GDPR-compliant handling of sensitive data</td><td>High</td></tr>
+      <tr><td>Students (SEN)</td><td>Indirect beneficiaries</td><td>Consistent support across all lessons and staff</td><td>Medium</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">04</span><h2 class="section-title">To-Be Process</h2></div>
+    <p class="lede">The redesigned process centralises the data, automates the reminders, and removes the manual consolidation work that currently falls on the SENCO.</p>
+    <div class="img-frame"><img src="images/to-be.png" alt="To-be process map showing the QSEN-supported workflow" /></div>
+    <p class="caption">Fig 2. Future state: centralised, automated, role-based access through QSEN.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">05</span><h2 class="section-title">Business Requirements (BRD)</h2></div>
+    <p class="lede">Features are prioritised with MoSCoW, reflecting the agreed business driver of teacher time-efficiency, with compliance and collaboration features as high-value secondary scope.</p>
+    <div class="table-scroll"><table class="metrics">
+      <tr><th>Feature</th><th>Description</th><th>Priority</th></tr>
+      <tr><td>SEN Profile Quick Access</td><td>Searchable, centralised profile accessible in one tap</td><td>Must Have</td></tr>
+      <tr><td>Automated Lesson Reminders</td><td>Notification ahead of a lesson with a SEN student</td><td>Must Have</td></tr>
+      <tr><td>AI-Tailored Worksheets</td><td>Differentiated resources based on the student's profile</td><td>Must Have</td></tr>
+      <tr><td>Best Practice Notes</td><td>Teachers log strategies that worked, visible to all staff</td><td>Must Have</td></tr>
+      <tr><td>Progress Tracking Dashboard</td><td>Auto-aggregated progress, no manual consolidation</td><td>Must Have</td></tr>
+      <tr><td>Role-Based Access Control</td><td>SENCO has full edit rights, teachers view and add notes</td><td>Must Have</td></tr>
+      <tr><td>Audit Trail</td><td>Logs who viewed or edited a profile, and when</td><td>Should Have</td></tr>
+      <tr><td>Student Transfer (Import/Export)</td><td>Securely move a profile when a student changes school</td><td>Should Have</td></tr>
+      <tr><td>MIS Integration</td><td>Pulls data from existing school systems (e.g. SIMS, Arbor)</td><td>Should Have</td></tr>
+      <tr><td>Parent/Carer Communication Log</td><td>Record of what's been shared home</td><td>Could Have</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">06</span><h2 class="section-title">User Stories</h2></div>
+    <p class="lede">A sample of the Must Have stories, each with acceptance criteria that fed directly into the UX design work.</p>
+
+    <div class="finding">
+      <p class="quote">US-01: As a subject teacher, I want to quickly locate a SEN student's profile, so I can prepare without delaying my lesson.</p>
+      <p class="desc">A matching profile returns in under 10 seconds, showing key needs, EHCP summary and communication preferences on one screen.</p>
+    </div>
+    <div class="finding">
+      <p class="quote">US-02: As a subject teacher, I want a reminder ahead of a lesson with a SEN student, so I don't forget to apply their agreed strategies.</p>
+      <p class="desc">A notification arrives a configurable time before the lesson, and tapping it opens the student's full profile directly.</p>
+    </div>
+    <div class="finding">
+      <p class="quote">US-03: As a subject teacher, I want to generate an AI-tailored worksheet, so I can differentiate my lesson without significant extra prep time.</p>
+      <p class="desc">The generated worksheet reflects the student's documented need, and the teacher can review and edit it before it's used.</p>
+    </div>
+    <div class="finding">
+      <p class="quote">US-04: As a SENCO, I want progress data aggregated automatically from teacher input, so I no longer need to chase and consolidate updates by hand.</p>
+      <p class="desc">Teacher-logged notes compile into a dashboard the SENCO can filter by year group, need type or student.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">07</span><h2 class="section-title">Success Metrics &amp; Risks</h2></div>
+    <h3>Success metrics</h3>
+    <div class="table-scroll"><table class="metrics">
+      <tr><th>Metric</th><th>Baseline</th><th>Target</th></tr>
+      <tr><td>Time to locate a SEN profile</td><td>5–10 minutes</td><td>Under 30 seconds</td></tr>
+      <tr><td>SENCO time consolidating updates</td><td>Several hours/week</td><td>Reduced by 70%+</td></tr>
+      <tr><td>Worksheet prep time</td><td>15–30 minutes</td><td>Under 5 minutes</td></tr>
+    </table></div>
+    <h3>Key risks</h3>
+    <ul class="list">
+      <li>Sensitive data breach: mitigated with role-based access, encryption, audit trail and DPO sign-off before launch</li>
+      <li>Low staff adoption from habit: mitigated with SENCO-led rollout and removing old spreadsheet access post-launch</li>
+      <li>AI-generated content inaccuracy: mitigated with a mandatory teacher review step before any resource is used</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">08</span><h2 class="section-title">Conclusion</h2></div>
+    <p>QSEN addresses a genuine, lived operational gap: SEN student information that's currently fragmented across spreadsheets, email and paper files, creating avoidable time loss for teachers and significant manual overhead for SENCOs.</p>
+    <p>By centralising profile access, automating reminders, introducing AI-assisted resource generation and removing manual progress consolidation, QSEN is projected to materially reduce per-lesson preparation time while strengthening data governance around sensitive SEN information.</p>
+    <p>This BRD and its supporting process maps formed the requirements foundation for the UX design work that followed.</p>
+  </div>
+</section>
+
+
+</article>
+
+<div class="divider"></div>
+
+<article id="radiant" class="case-article">
+<div class="case-kicker"><div class="wrap">Case Study 3 of 4 &middot; Business Analysis</div></div>
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Business Analysis Case Study</div>
+    <h1>Leading a Salesforce CRM replacement across three roles and three sprints.</h1>
+    <p class="sub">Radiant Solution, a financial consultancy, needed a full CRM replacement. I worked across Business Analyst, Product Owner and Scrum Master roles to take the project from requirements through to a signed-off UAT.</p>
+    <div class="meta-row">
+      <div class="meta-item"><div class="label">Roles</div><div class="value">BA, Product Owner, Scrum Master</div></div>
+      <div class="meta-item"><div class="label">Method</div><div class="value">Hybrid Waterfall + Agile</div></div>
+      <div class="meta-item"><div class="label">Tools</div><div class="value">Jira, Azure DevOps, Salesforce, Confluence</div></div>
+      <div class="meta-item"><div class="label">Output</div><div class="value">BRD, backlog, UAT sign-off</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">01</span><h2 class="section-title">Business Context &amp; Objectives</h2></div>
+    <p class="lede">Radiant Solution's bespoke legacy CRM could no longer support the business as it grew. I was engaged across three roles to lead requirements gathering, artefact creation and Agile delivery of a new Salesforce CRM.</p>
+    <h3>Project objectives</h3>
+    <ul class="list">
+      <li><strong>Customer onboarding:</strong> automate the end-to-end onboarding workflow in Salesforce, reducing manual data entry and accelerating lead conversion</li>
+      <li><strong>Reporting &amp; campaigns:</strong> generate automated sales and marketing reports, replacing ad-hoc manual exports</li>
+      <li><strong>Website integration:</strong> capture new leads from the Radiant Solution website directly into Salesforce pipelines</li>
+      <li><strong>System integrations:</strong> connect HubSpot (marketing) and SAGE (accounting) with Salesforce, creating one unified data ecosystem</li>
+    </ul>
+    <h3>My roles on this project</h3>
+    <ul class="list">
+      <li><strong>Business Analyst:</strong> requirements elicitation, BRD authoring, stakeholder management, process mapping</li>
+      <li><strong>Product Owner:</strong> backlog management, user stories, acceptance criteria, release planning</li>
+      <li><strong>Scrum Master:</strong> sprint facilitation, daily stand-ups, retrospectives, impediment removal</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">02</span><h2 class="section-title">Methodology: Hybrid Waterfall + Agile</h2></div>
+    <p class="lede">The project combined an upfront Waterfall phase for scope and requirements with an Agile delivery phase across three sprints, giving stakeholders certainty on scope while the team retained the flexibility to adapt during build.</p>
+    <h3>Waterfall phase</h3>
+    <ul class="list">
+      <li>Defined project scope and objectives, and identified and engaged stakeholders</li>
+      <li>Requirements elicitation through interviews and document review</li>
+      <li>Business Requirements Document (BRD), As-Is and To-Be use case diagrams, and process flow mapping</li>
+    </ul>
+    <h3>Agile phase, across three sprints</h3>
+    <ul class="list">
+      <li><strong>Initiation:</strong> project kick-off, team setup, tool configuration in Jira and DevOps</li>
+      <li><strong>Backlog:</strong> epics, user stories, acceptance criteria, story point estimation</li>
+      <li><strong>Sprint planning:</strong> scope selection, capacity planning, task breakdown</li>
+      <li><strong>Execution:</strong> daily stand-ups, sprint delivery, backlog refinement</li>
+      <li><strong>Review:</strong> sprint demo, stakeholder sign-off, UAT</li>
+      <li><strong>Retrospective:</strong> team feedback, improvement actions, documented in Confluence</li>
+    </ul>
+    <h3>BA techniques applied</h3>
+    <ul class="list">
+      <li><strong>Requirements elicitation:</strong> project brief review, stakeholder interviews and workshops, re-engagement sessions</li>
+      <li><strong>Requirements design:</strong> As-Is/To-Be use case diagrams, process and normal-flow diagrams, prototyping and wireframes</li>
+      <li><strong>User stories &amp; testing:</strong> stories with acceptance criteria, positive and negative test cases, UAT scripts and sign-off</li>
+      <li><strong>Documentation:</strong> BRD authoring, user manual, Confluence retrospective records</li>
+      <li><strong>Prioritisation:</strong> MoSCoW, stakeholder-advised ranking, backlog grooming</li>
+      <li><strong>Estimation:</strong> Planning Poker run through Jira, the Azure DevOps estimation tool, sprint velocity tracking</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">03</span><h2 class="section-title">As-Is Process: Customer Onboarding</h2></div>
+    <p class="lede">Mapping the current onboarding journey surfaced exactly where the legacy system was failing the business, before a single line of the new BRD was written.</p>
+    <div class="img-frame"><img src="images/radiant/process-as-is.jpg" alt="As-is process flow for customer onboarding" /></div>
+    <p class="caption">Fig 1. Current-state customer onboarding journey across Leads, CRM Team and Account Team.</p>
+    <h3>Key observations</h3>
+    <ul class="list">
+      <li><strong>Three actors:</strong> Leads, the CRM Team and the Account Team were all involved in onboarding, with handoffs between each</li>
+      <li><strong>Manual entry:</strong> contact details were manually transferred into the legacy CRM, which was error-prone</li>
+      <li><strong>Invoice gap:</strong> no automation existed between the CRM and SAGE, so invoices were created manually</li>
+      <li><strong>Payment risk:</strong> payment decline notifications were handled manually, with no automated retry</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">04</span><h2 class="section-title">To-Be: Use Case Diagram</h2></div>
+    <p class="lede">The redesigned Salesforce system defines clear actor interactions across four user types, replacing the ad-hoc manual handoffs in the legacy process.</p>
+    <div class="img-frame"><img src="images/radiant/use-case-to-be.jpg" alt="To-be use case diagram for the Salesforce CRM system" /></div>
+    <p class="caption">Fig 2. Future-state actor interactions across the Salesforce CRM system.</p>
+    <h3>System actors</h3>
+    <ul class="list">
+      <li><strong>Leads:</strong> visit the website and submit a contact form, make payment, receive invoice and confirmation</li>
+      <li><strong>CRM Team:</strong> record and contact leads, update the CRM system, send bulk notifications</li>
+      <li><strong>Admin Team:</strong> assign and manage user accounts, add or delete users</li>
+      <li><strong>Marketing Team:</strong> view customer details, send bulk marketing campaigns</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">05</span><h2 class="section-title">Wireframes &amp; UI Design Decisions</h2></div>
+    <p class="lede">Wireframes for the CRM's user management screens translated the requirements into concrete interface decisions, balancing data integrity against the day-to-day workload of the admin team.</p>
+    <div class="img-frame"><img src="images/radiant/wireframes.jpg" alt="CRM user interface wireframes" /></div>
+    <p class="caption">Fig 3. CRM user management wireframe, showing role-based access controls.</p>
+    <h3>Design decisions</h3>
+    <ul class="list">
+      <li><strong>Role-based access:</strong> Yes/No toggles for Reports, Accounts, CRM and Admin access per user</li>
+      <li><strong>Required fields:</strong> asterisk marking on mandatory fields, to prevent incomplete submissions</li>
+      <li><strong>Clear CTAs:</strong> Cancel, Delete, Save and Grid Setting buttons prominently placed</li>
+      <li><strong>Self-service reset:</strong> a "send reset password link" option, reducing admin workload</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">06</span><h2 class="section-title">User Stories &amp; Estimation</h2></div>
+    <p class="lede">User stories were written with explicit acceptance criteria, then estimated by the whole team using Planning Poker to surface hidden complexity early.</p>
+    <div class="finding">
+      <p class="quote">As a customer, I want to have multiple payment options during checkout, so that I can choose the method that suits me best.</p>
+      <p class="desc">Acceptance criteria: given I am on the checkout page, when I select credit, debit card or PayPal, then payment is processed securely.</p>
+    </div>
+    <h3>Why Planning Poker</h3>
+    <ul class="list">
+      <li><strong>Consensus-based:</strong> the whole team estimates together, avoiding anchoring bias from a single estimate</li>
+      <li><strong>Fibonacci scale:</strong> cards from 0 to 100 on a Fibonacci sequence reflect genuine uncertainty in larger stories</li>
+      <li><strong>Uncovers gaps:</strong> wide score variance triggers discussion, surfacing hidden complexity early</li>
+      <li><strong>Jira integrated:</strong> story points feed directly into sprint velocity and burndown charts</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">07</span><h2 class="section-title">Sprint Retrospective</h2></div>
+    <p class="lede">Sprint 1's retrospective, documented in Confluence, surfaced both what was working and what needed to change before sprint 2 began.</p>
+    <div class="img-frame"><img src="images/radiant/retro.jpg" alt="Sprint 1 retrospective documented in Confluence" /></div>
+    <p class="caption">Fig 4. Sprint 1 retrospective: what went well, what didn't, and what to keep doing.</p>
+    <h3>Retro insights</h3>
+    <ul class="list">
+      <li><strong>What went well:</strong> strong team collaboration, with everyone supportive and engaged</li>
+      <li><strong>What didn't go well:</strong> too much time spent in stand-ups; decision-making needed faster resolution</li>
+      <li><strong>Keep doing:</strong> daily Scrum meetings, reducing discussion in favour of action, and continuing to share ideas openly</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">08</span><h2 class="section-title">Lessons Learnt</h2></div>
+    <ul class="list">
+      <li><strong>Define objectives early:</strong> ambiguous stakeholder objectives caused rework in sprint 1. A SMART objectives workshop upfront would have reduced this by at least one sprint cycle</li>
+      <li><strong>Data flow mapping:</strong> understanding the data mapping between SAGE, HubSpot and Salesforce was the most complex technical challenge. Field-level mapping sessions with IT saved significant integration testing time</li>
+      <li><strong>Team collaboration:</strong> a cross-functional team with a clear RACI meant decisions were made faster, and Confluence documentation ensured nothing was lost between sprints</li>
+      <li><strong>Effective ceremonies:</strong> timeboxing sprint planning and refinement to fixed slots improved focus, and retrospectives were critical for continuous improvement</li>
+      <li><strong>Testing &amp; validation:</strong> structured UAT scripts with explicit pass/fail criteria reduced the defect escape rate, and involving end-users early in UAT accelerated sign-off</li>
+      <li><strong>Stakeholder communication:</strong> weekly status emails to stakeholders outside the core team prevented last-minute change requests that would have derailed the release plan</li>
+    </ul>
+    <h3>Outcome</h3>
+    <p>UAT was signed off by stakeholders after three sprints. This project gave me hands-on experience across the full BA lifecycle, from elicitation through to delivery, on a realistic commercial brief spanning CRM, marketing and finance systems.</p>
+  </div>
+</section>
+
+
+</article>
+
+<section class="category" id="ux-track">
+  <div class="wrap">
+    <div class="category-head">
+      <div class="category-eyebrow">UX Design</div>
+      <h2>Designing the day-to-day experience</h2>
+      <p>User research, personas, wireframes and prototypes that turn requirements into something people can actually use.</p>
+    </div>
+  </div>
+</section>
+
+<article id="qsen-ux" class="case-article">
+<div class="case-kicker"><div class="wrap">Case Study 2 of 4 &middot; UX Design</div></div>
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">UX Design Case Study &middot; Part 2 of 2</div>
+    <h1>Giving teachers what they need to know, in the time it takes to walk between classrooms.</h1>
+    <p class="sub">QSEN turns a fragmented spreadsheet workflow into a fast, focused tool for supporting SEN students, designed end-to-end from a real classroom pain point.</p>
+    <div class="meta-row">
+      <div class="meta-item"><div class="label">Role</div><div class="value">UX Designer (solo)</div></div>
+      <div class="meta-item"><div class="label">Timeline</div><div class="value">3 weeks</div></div>
+      <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, React prototyping</div></div>
+      <div class="meta-item"><div class="label">Platform</div><div class="value">Responsive web app</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">01</span><h2 class="section-title">Project Overview</h2></div>
+    <p class="lede">SEN student information in UK secondary schools typically lives in spreadsheets. It's hard to search, easy to lose track of, and disconnected from the classroom moment where it actually matters.</p>
+    <p>QSEN is a companion case study to a Business Analysis project addressing the same problem. Where the BA work defined the business requirements and process change, this project focuses on designing the day-to-day experience for the two people who'd actually use it: the subject teacher and the SENCO.</p>
+    <h3>My role</h3>
+    <ul class="list">
+      <li>End-to-end UX designer: research planning, information architecture, wireframing, prototyping, and usability evaluation</li>
+      <li>Sole designer, working from real operational pain points observed first-hand as a practising teacher</li>
+    </ul>
+    <h3>Tools</h3>
+    <ul class="list">
+      <li>Figma for wireframing and prototyping</li>
+      <li>Structured interviews with teacher and SENCO colleagues</li>
+      <li>React/HTML for the interactive high-fidelity prototype</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">02</span><h2 class="section-title">The Challenge</h2></div>
+    <p class="lede">Subject teachers lose 5–10 minutes per lesson trying to locate or recall SEN student information. That's time taken directly from teaching, with no guarantee the right support strategy gets applied in time.</p>
+    <p>There was also no structured way for staff to share what actually worked for a student. A strategy discovered by one teacher in October would often be lost by January, when that student changed classes or that teacher left the school.</p>
+    <blockquote class="design-q">"How might we give a subject teacher everything they need to know about a SEN student, in the time it takes to walk between classrooms, without adding another system for already-stretched staff to maintain?"</blockquote>
+    <h3>Constraints</h3>
+    <ul class="list">
+      <li>Teachers check this between lessons, often on a phone, with under a minute to spare</li>
+      <li>Sensitive safeguarding data requires careful information design, useful but not overwhelming</li>
+      <li>Any new tool is competing with the path of least resistance: doing nothing and guessing</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">03</span><h2 class="section-title">Research &amp; Insights</h2></div>
+    <div class="placeholder-note">Placeholder findings representative of the planned research. To be replaced with verbatim quotes once colleague interviews are complete.</div>
+    <p>Semi-structured interviews (~30 minutes) with subject teachers and SENCO staff, covering current workflow, pain points and workarounds, and reaction to the QSEN concept.</p>
+
+    <div class="finding">
+      <p class="quote">"I find out who I'm teaching about ten minutes before the lesson."</p>
+      <p class="desc">Teachers often only learn they have a SEN student in an upcoming lesson shortly before it starts. There's no proactive signal, so they have to remember to check.</p>
+    </div>
+    <div class="finding">
+      <p class="quote">"I have my own cheat sheet because the official one is too hard to use."</p>
+      <p class="desc">Several teachers keep personal notes, in a notebook or a phone app, because the shared spreadsheet is too slow to use in the moment. That recreates the exact fragmentation problem QSEN aims to solve.</p>
+    </div>
+    <div class="finding">
+      <p class="quote">"I'd trust an AI worksheet more if I could see what it changed."</p>
+      <p class="desc">Reactions to AI-generated resources were positive but cautious. Teachers wanted to understand why something was adapted, not just receive a finished output.</p>
+    </div>
+
+    <h3>How this shaped the design</h3>
+    <ul class="list">
+      <li>The dashboard leads with what's happening today and soon, rather than an alphabetical list</li>
+      <li>The profile screen was designed as the single, fast destination, replacing the need for a personal workaround</li>
+      <li>The AI worksheet flow includes a dedicated "What changed" section, which directly answers the trust concern above</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">04</span><h2 class="section-title">Ideation &amp; Iteration</h2></div>
+    <p class="lede">Early sketches tested two structures: a single long-scroll profile page, versus a card-based dashboard with a focused profile detail screen.</p>
+    <p>The card-based dashboard won because it let urgency, an upcoming lesson, take visual priority. That directly answers the "walk between classrooms" constraint from research.</p>
+
+    <div class="img-frame"><img src="images/wireframes-v1.png" alt="Low-fidelity wireframes showing first pass and iteration" /></div>
+    <p class="caption">Fig 1. First-pass wireframes and the iteration that followed a quick usability check.</p>
+
+    <h3>What changed and why</h3>
+    <p>Version 1 placed the "Generate worksheet" action at the bottom of a long profile page. A quick corridor test surfaced a clear issue: reaching it required scrolling past the full profile, which conflicted directly with the time-pressure constraint from research.</p>
+    <p>Version 2 made the primary action persistently visible, so a teacher can always reach the worksheet generator regardless of scroll position. This approach carried through into the final high-fidelity design.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">05</span><h2 class="section-title">Final Solution &amp; Impact</h2></div>
+    <p class="lede">QSEN's final design centres on four connected moments in a teacher's day: seeing what's coming up, opening a fast and focused profile, generating a tailored resource with visible reasoning, and logging a strategy note for the next person who teaches that student.</p>
+
+    <h3>Core teacher flow</h3>
+    <div class="flow-strip">
+      <div class="shot"><img src="images/shot-01-dashboard-teacher.png" alt="Dashboard" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/shot-02-profile-marcus.png" alt="Student profile" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/shot-03-worksheet-topics.png" alt="AI worksheet topic selection" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/shot-04-worksheet-result.png" alt="Worksheet result with what changed" /></div>
+    </div>
+    <p class="caption">Dashboard &rarr; Student profile &rarr; AI-tailored worksheet &rarr; Result with transparent reasoning.</p>
+
+    <h3>SENCO: student transfer flow</h3>
+    <p>This feature was added after the initial design review. It gives the SENCO a way to securely export a leaving student's profile to their new school, or import and review an incoming student's profile, addressing a real gap where SEN information is often lost or delayed during school transitions.</p>
+    <div class="flow-strip">
+      <div class="shot"><img src="images/shot-06-dashboard-senco.png" alt="SENCO dashboard" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/shot-07-transfer-hub.png" alt="Transfer hub" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/shot-08-export-flow.png" alt="Export flow" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/shot-09-import-review.png" alt="Import review" /></div>
+    </div>
+
+    <h3>Usability testing results</h3>
+    <div class="placeholder-note">Placeholder data, structured to match the planned usability test script. Will be replaced with real session results.</div>
+    <div class="table-scroll"><table class="metrics">
+      <tr><th>Task</th><th>Success</th><th>Avg. time</th><th>Notes</th></tr>
+      <tr><td>Find a specific student's profile</td><td>5/5</td><td>8s</td><td>All used the dashboard list directly</td></tr>
+      <tr><td>Generate a tailored worksheet</td><td>5/5</td><td>22s</td><td>"What changed" read by all before download</td></tr>
+      <tr><td>Log a note for another teacher</td><td>4/5</td><td>15s</td><td>1 participant looked on dashboard first</td></tr>
+    </table></div>
+
+    <h3>Projected business impact</h3>
+    <div class="impact-grid">
+      <div class="impact-card"><div class="big">&lt;30 sec</div><div class="small">Profile lookup time, down from 5–10 minutes</div></div>
+      <div class="impact-card"><div class="big">&lt;5 min</div><div class="small">Worksheet prep time, down from 15–30 minutes</div></div>
+    </div>
+
+    <h3>Reflection</h3>
+    <p>This project showed me how much UX and BA work overlap when you're solving a real operational problem. The same root cause, fragmented and hard-to-access information, produces both a business inefficiency and a poor user experience. Designing the SENCO transfer feature after the initial review also reminded me of the value in staying open to scope changes that address a genuine, previously unconsidered need.</p>
+  </div>
+</section>
+
+
+</article>
+
+<div class="divider"></div>
+
+<article id="railsmart" class="case-article">
+<div class="case-kicker"><div class="wrap">Case Study 4 of 4 &middot; UX Design</div></div>
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">UX Design Case Study</div>
+    <h1>RailSmart: helping train travellers not just plan their journey, but make it in real life.</h1>
+    <p class="sub">A voice-led train navigation app covering live platforms, smart alerts, station maps and turn-by-turn guidance, designed around four real traveller types.</p>
+    <div class="meta-row">
+      <div class="meta-item"><div class="label">Role</div><div class="value">UX Designer (solo)</div></div>
+      <div class="meta-item"><div class="label">Process</div><div class="value">Empathise, define, ideate, prototype, test</div></div>
+      <div class="meta-item"><div class="label">Tools</div><div class="value">Figma, early sketch concepts</div></div>
+      <div class="meta-item"><div class="label">Platform</div><div class="value">Mobile app (iOS/Android)</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">01</span><h2 class="section-title">Project Overview</h2></div>
+    <p class="lede">RailSmart helps train travellers not just plan their journey, but make it in real life: live platforms, smart alerts, station maps and turn-by-turn guidance, all in one app.</p>
+    <p>Most journey planning apps stop at the timetable. They tell you which train to catch, then leave you to work out the rest: which platform, which exit, whether you'll make the connection, and what to do when something changes. RailSmart was designed to close that gap, picking up exactly where a timetable leaves off.</p>
+    <h3>My role</h3>
+    <ul class="list">
+      <li>End-to-end UX designer: user research, persona development, early sketch concepts, wireframes, and a full high-fidelity prototype</li>
+      <li>Worked from real user research findings highlighting dissatisfaction with existing transport map apps</li>
+    </ul>
+    <h3>Key features</h3>
+    <ul class="list">
+      <li>Voice search for hands-free journey planning</li>
+      <li>Live platform information updated in real time</li>
+      <li>Indoor station maps with turn-by-turn guidance</li>
+      <li>Smart alerts for platform changes and connection risk</li>
+      <li>Crowd information by carriage</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">02</span><h2 class="section-title">Empathise: Research &amp; Personas</h2></div>
+    <p class="lede">Research findings pointed to a consistent gap: existing transport apps plan the journey well, but abandon the traveller the moment they step into a real station.</p>
+    <p>Four personas were developed to represent the primary user segments, each with distinct needs, behaviours and pain points. Designing for all four at once shaped almost every later decision, since a feature that helped one persona often had to be checked against the others.</p>
+
+    <div class="img-frame"><img src="images/railsmart/personas.png" alt="Four RailSmart user personas" /></div>
+    <p class="caption">Fig 1. The four personas: Maya (daily commuter), Derek (accessibility focus), Priya (international student), Tom (time-critical business traveller).</p>
+
+    <h3>Maya Chen, 31, Urban Daily Commuter</h3>
+    <p>Marketing manager commuting five days a week. Values speed above all, and is frustrated that platform change alerts come too late and existing apps don't account for walking time.</p>
+
+    <h3>Derek Hollis, 68, Retired, Accessibility Focus</h3>
+    <p>Travels to London for hospital appointments. Mild arthritis makes steps and long walks painful, and he's anxious about missing trains. Needs step-free routing and voice guidance, not a map he has to squint at.</p>
+
+    <h3>Priya Nair, 22, International Student</h3>
+    <p>Still learning the UK rail system six months after moving from Bangalore. Confused by rail jargon and unclear which ticket to buy. Needs a jargon-free interface and offline maps for areas with poor signal.</p>
+
+    <h3>Tom Garrett, 38, Field Sales Rep</h3>
+    <p>Travels 3 to 4 days a week for client meetings on a tight schedule. Has missed connections before due to vague disruption information, and needs proactive rerouting, not just a delay notice.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">03</span><h2 class="section-title">Define &amp; Ideate</h2></div>
+    <p class="lede">With four personas pulling in different directions, the design question became less "what should this app do" and more "what does it do for everyone, without overwhelming anyone."</p>
+    <blockquote class="design-q">"How might we take a traveller all the way from 'where am I going' to 'I'm stood on the right spot on the platform', without asking them to read anything they don't need at that moment?"</blockquote>
+    <p>Early sketch concepts tested the core screens before any visual design was applied: Home, Routes, Live Journey, Alert, Station Navigation and Crowd Overlay. Keeping these rough on purpose made it easier to question the information hierarchy honestly, rather than getting attached to a polished layout too early.</p>
+
+    <div class="img-frame"><img src="images/railsmart/sketches.png" alt="Early sketch concepts for RailSmart's core screens" /></div>
+    <p class="caption">Fig 2. Early sketch concepts, showing raw information hierarchy before any digital fidelity.</p>
+
+    <h3>From sketch to wireframe</h3>
+    <p>The sketches confirmed the shape of the journey: a voice-first home screen, a route comparison view, a live countdown during the journey itself, and indoor turn-by-turn guidance once inside the station. Wireframes then fixed the structure, content hierarchy and component placement, with no colour or imagery, before any visual design decisions were made.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">04</span><h2 class="section-title">Prototype: From Wireframe to Hi-Fi</h2></div>
+    <p class="lede">The high-fidelity prototype carried the wireframe structure through into a dark theme with a single green accent, chosen for strong contrast and quick scanning while walking.</p>
+    <p><a href="railsmart-ux.html" style="color: var(--accent); font-weight: 600; text-decoration: none;">View the full interactive prototype &rarr;</a> &mdash; all screens, the design system, and the feature roadmap in one page.</p>
+
+    <h3>Core journey flow</h3>
+    <div class="flow-strip">
+      <div class="shot"><img src="images/railsmart/hifi-home.png" alt="Home screen" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/railsmart/hifi-route-results.png" alt="Route results screen" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/railsmart/hifi-live-journey.png" alt="Live journey screen" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/railsmart/hifi-station-nav.png" alt="Station navigation screen" /></div>
+    </div>
+    <p class="caption">Home &rarr; Route results &rarr; Live journey &rarr; Station navigation, the four screens a traveller moves through on a typical trip.</p>
+
+    <h3>Smart alerts and crowd information</h3>
+    <p>A live journey doesn't always go to plan. The alert and crowd overlay screens were designed to interrupt only when it matters, with a single clear action rather than a wall of text.</p>
+    <div class="flow-strip">
+      <div class="shot"><img src="images/railsmart/hifi-alert.png" alt="Platform change alert screen" /></div>
+      <div class="flow-arrow">&rarr;</div>
+      <div class="shot"><img src="images/railsmart/hifi-crowd-overlay.png" alt="Crowd overlay screen" /></div>
+    </div>
+
+    <h3>An unplanned feature, inspired by a real station board</h3>
+    <p>Partway through the project, a photo of a real station departure board surfaced two details that hadn't been in the original brief: a cancelled 13:45 service to Reading, and wheelchair-accessible zones marked at carriages 2 and 6. Rather than treat that as outside scope, it became the seed for two new features.</p>
+    <ul class="list">
+      <li><strong>Wheelchair Zone Planner</strong>: automatically highlights which train zones have wheelchair facilities, then selects the best carriage based on the traveller's station exit, directly serving Derek's accessibility needs</li>
+      <li><strong>Cancellation Reroute Engine</strong>: when a service is cancelled, RailSmart instantly pushes an alternative route with live capacity and platform info, addressing exactly the kind of vague disruption messaging that frustrates Tom</li>
+    </ul>
+    <p>Ten further features followed the same pattern of starting from a specific persona's pain point rather than a generic feature list, including full voice navigation for Derek, offline station maps for Priya, and a business travel dashboard with expense export for Tom.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label"><span class="section-num">05</span><h2 class="section-title">Test &amp; Reflection</h2></div>
+    <p class="lede">Low-fidelity prototypes were used to test whether each persona could complete their core task: Maya finding the fastest route, Derek finding a step-free one, Priya understanding the fare options, and Tom getting rerouted around a disruption.</p>
+    <h3>What I'd test next</h3>
+    <ul class="list">
+      <li>Whether the voice search is actually faster than typing for a returning user, not just a first-time novelty</li>
+      <li>Whether the crowd overlay's carriage recommendation is trusted enough to act on, or whether people check the platform themselves anyway</li>
+      <li>How Derek's persona responds to the step-free routing in a real station, not just in the prototype</li>
+    </ul>
+    <h3>Reflection</h3>
+    <p>Designing for four different personas at once was the most useful constraint on this project. It's easy to design a clean app for one ideal user; it's much harder to keep that same clarity once you're asking whether a feature that helps a confident daily commuter might confuse an anxious first-time traveller. The station board photo also reinforced something I'd come back to on later projects: real-world artefacts, even an unplanned photo of a departure board, often surface needs a brief alone wouldn't.</p>
+    <h3>Outcome</h3>
+    <p>The project delivered a complete design system, from early sketch concepts through to a 12-feature high-fidelity prototype covering all four personas, documented in the linked interactive showcase.</p>
+  </div>
+</section>
+
+
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Jovan Campbell</strong> &middot; Business Analysis &amp; UX Design Portfolio</p>
+    <p class="footer-links">Trained via Google's Business Analysis and UX Design Professional Certificates</p>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  var sections = Array.prototype.slice.call(document.querySelectorAll('#top, .case-article'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav-links a'));
+  if (!sections.length || !links.length || !('IntersectionObserver' in window)) return;
+  var byId = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute('href').replace('#', '');
+    byId[id] = a;
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var link = byId[entry.target.id];
+        if (link) {
+          links.forEach(function (a) { a.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  sections.forEach(function (s) { observer.observe(s); });
+})();
+</script>
+</body>
+</html>
